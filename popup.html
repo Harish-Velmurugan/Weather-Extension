@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Harish Weather extension</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <script src="extension.js"></script>
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        border: border-box;
+    }
+    
+    body {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.pinimg.com/originals/71/92/5c/71925c75936297af1e041e98cebfdfe6.jpg');
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: fixed;
+        background-repeat: no-repeat;
+        width: 600px;
+        height: 350px;
+    }
+    
+    .c2 {
+        width: 600px;
+        height: 350px;
+        background: inherit;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .c2:before {
+        width: 650px;
+        height: 400px;
+        content: '';
+        position: absolute;
+        top: -25px;
+        bottom: -25px;
+        bottom: 0;
+        right: 0;
+        background: inherit;
+        box-shadow: inset 0 0 0 500px rgba(255, 255, 255, 0.2);
+        filter: blur(10px);
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    
+    .img-text {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 500px;
+    }
+    
+    .img-text h1 {
+        font-family: 'Roboto', sans-serif;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .img-text h4 {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-align: right;
+    }
+    
+    #image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    
+    .description {
+        color: rgb(184, 208, 245);
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+
+<body>
+    <div class="c2">
+        <div class="img-text">
+            <h1>Weather Extension</h1>
+            <h4>- Made by Harish</h4>
+            <input type="text" name="location" value="" id="location">
+            <button id='button'>Search</button>
+            <div class="container">
+                <img src="" alt="" id="image"><br>
+                <div id="city"></div><br>
+                <div id="desc">
+                    <h2 class="description"></h2><br>
+                </div>
+                <div id="tempc"></div>
+                <div id="temp"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
